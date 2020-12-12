@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="whiteBox">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/box_text_size</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">#FFF0F8FF</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="borderWidth">2dp</item>
+
+
+    </style>
+</resources>

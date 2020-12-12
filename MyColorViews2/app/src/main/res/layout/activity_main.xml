@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraint_layout"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/box_one_text"
+        style="@style/whiteBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/box_one"
+        android:layout_margin="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/box_two_text"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        style="@style/whiteBox"
+        android:text="@string/box_two"
+        app:layout_constraintTop_toBottomOf="@id/box_one_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/box_three_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/box_three"
+        style="@style/whiteBox"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/box_one_text"
+        app:layout_constraintLeft_toRightOf="@id/box_two_text"
+        app:layout_constraintRight_toRightOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/box_four_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/box_four"
+        style="@style/whiteBox"
+        app:layout_constraintTop_toBottomOf="@id/box_three_text"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintLeft_toRightOf="@id/box_two_text"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/box_five_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/whiteBox"
+        android:text="@string/box_five"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/box_four_text"
+        app:layout_constraintLeft_toRightOf="@id/box_two_text"
+        app:layout_constraintRight_toRightOf="parent"
+
+
+  />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
