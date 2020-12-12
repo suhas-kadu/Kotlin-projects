@@ -5,4 +5,20 @@
     <string name="box_one">Box one</string>
     <string name="box_three">Box Three</string>
     <string name="box_four">Box Four</string>
+    <string name="how_to_play">how to play</string>
+    <string name="tap_the_screen_and_buttons">Tap the screen and buttons.</string>
+    <string name="button_red">RED</string>
+    <string name="button_yellow">YELLOW</string>
+    <string name="button_green">GREEN</string>
+    <string name="box_seventeen">box seventeen</string>
+    <string name="box_sixteen">box sixteen</string>
+    <string name="box_fourteen">box fourteen</string>
+    <string name="box_thirteen">box thirteen</string>
+    <string name="box_twelve">box twelve</string>
+    <string name="box_eleven">box eleven</string>
+    <string name="box_ten">box ten</string>
+    <string name="box_nine">box nine</string>
+    <string name="box_eight">box eight</string>
+    <string name="box_seven">box seven</string>
+    <string name="box_six">box six</string>
 </resources>

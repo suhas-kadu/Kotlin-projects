@@ -1,70 +1,299 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/constraint_layout"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/box_one_text"
-        style="@style/whiteBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/box_one"
-        android:layout_margin="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/constraint_layout"
+       >
+       <TextView
+           android:id="@+id/box_one_text"
+           style="@style/whiteBox"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="16dp"
+           android:text="@string/box_one"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/box_two_text"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        style="@style/whiteBox"
-        android:text="@string/box_two"
-        app:layout_constraintTop_toBottomOf="@id/box_one_text"
-        app:layout_constraintLeft_toLeftOf="parent"
-        />
+       <TextView
+           android:id="@+id/box_two_text"
+           style="@style/whiteBox"
+           android:layout_width="130dp"
+           android:layout_height="130dp"
+           android:text="@string/box_two"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/box_one_text" />
 
-    <TextView
-        android:id="@+id/box_three_text"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/box_three"
-        style="@style/whiteBox"
-        app:layout_constraintVertical_chainStyle="spread"
-        app:layout_constraintTop_toBottomOf="@id/box_one_text"
-        app:layout_constraintLeft_toRightOf="@id/box_two_text"
-        app:layout_constraintRight_toRightOf="parent"
+       <TextView
+           android:id="@+id/box_three_text"
+           style="@style/whiteBox"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/box_three"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintLeft_toRightOf="@id/box_two_text"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/box_one_text"
+           app:layout_constraintVertical_chainStyle="spread"
 
-        />
+           />
 
-    <TextView
-        android:id="@+id/box_four_text"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/box_four"
-        style="@style/whiteBox"
-        app:layout_constraintTop_toBottomOf="@id/box_three_text"
-        app:layout_constraintVertical_chainStyle="spread"
-        app:layout_constraintLeft_toRightOf="@id/box_two_text"
-        app:layout_constraintRight_toRightOf="parent"
-        />
+       <TextView
+           android:id="@+id/box_four_text"
+           style="@style/whiteBox"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/box_four"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintLeft_toRightOf="@id/box_two_text"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/box_three_text"
+           app:layout_constraintVertical_chainStyle="spread" />
 
-    <TextView
-        android:id="@+id/box_five_text"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        style="@style/whiteBox"
-        android:text="@string/box_five"
-        app:layout_constraintVertical_chainStyle="spread"
-        app:layout_constraintTop_toBottomOf="@id/box_four_text"
-        app:layout_constraintLeft_toRightOf="@id/box_two_text"
-        app:layout_constraintRight_toRightOf="parent"
+       <TextView
+           android:id="@+id/box_five_text"
+           style="@style/whiteBox"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/box_five"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintLeft_toRightOf="@id/box_two_text"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/box_four_text"
+           app:layout_constraintVertical_chainStyle="spread" />
+
+       <TextView
+           android:id="@+id/label_text"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginHorizontal="16dp"
+           android:text="@string/how_to_play"
+           android:textSize="24sp"
+           android:textStyle="bold"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintBaseline_toBaselineOf="@id/info_text"
+
+           />
+
+       <TextView
+           android:id="@+id/info_text"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/tap_the_screen_and_buttons"
+           app:layout_constraintTop_toBottomOf="@id/box_two_text"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toEndOf="@id/label_text"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_margin="22dp"
+           app:layout_constraintHorizontal_bias="0.0"
+           app:layout_constraintVertical_bias="0.0"
+           />
+
+       <TextView
+           android:id="@+id/box_six_text"
+           style="@style/whiteBox"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/box_six"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toLeftOf="@id/box_nine_text"
+           app:layout_constraintTop_toBottomOf="@id/label_text"
+           app:layout_constraintVertical_chainStyle="spread"
+
+           />
+
+       <TextView
+           android:id="@+id/box_seven_text"
+           style="@style/whiteBox"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/box_seven"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toLeftOf="@id/box_nine_text"
+           app:layout_constraintTop_toBottomOf="@id/box_six_text"
+           app:layout_constraintVertical_chainStyle="spread" />
+
+       <TextView
+           android:id="@+id/box_eight_text"
+           style="@style/whiteBox"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/box_eight"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toLeftOf="@id/box_nine_text"
+           app:layout_constraintTop_toBottomOf="@id/box_seven_text"
+           app:layout_constraintVertical_chainStyle="spread" />
 
 
-  />
+       <TextView
+           android:id="@+id/box_nine_text"
+           style="@style/whiteBox"
+           android:layout_width="130dp"
+           android:layout_height="130dp"
+           android:text="@string/box_nine"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/info_text" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+       <TextView
+           android:id="@+id/box_ten_text"
+           style="@style/whiteBox"
+           android:layout_width="130dp"
+           android:layout_height="130dp"
+           android:text="@string/box_ten"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/box_eight_text" />
+
+
+       <TextView
+           android:id="@+id/box_eleven_text"
+           style="@style/whiteBox"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/box_eleven"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintLeft_toRightOf="@id/box_two_text"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/box_nine_text"
+           app:layout_constraintVertical_chainStyle="spread"
+
+           />
+
+       <TextView
+           android:id="@+id/box_twelve_text"
+           style="@style/whiteBox"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/box_twelve"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintLeft_toRightOf="@id/box_two_text"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/box_eleven_text"
+           app:layout_constraintVertical_chainStyle="spread" />
+
+       <TextView
+           android:id="@+id/box_thirteen_text"
+           style="@style/whiteBox"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/box_thirteen"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintLeft_toRightOf="@id/box_two_text"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/box_twelve_text"
+           app:layout_constraintVertical_chainStyle="spread" />
+
+
+       <TextView
+           android:id="@+id/box_fourteen_text"
+           style="@style/whiteBox"
+           android:layout_width="130dp"
+           android:layout_height="130dp"
+           android:text="@string/box_fourteen"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/box_thirteen_text" />
+
+
+       <TextView
+           android:id="@+id/box_fifteen_text"
+           style="@style/whiteBox"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="box fifteen"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toLeftOf="@id/box_nine_text"
+           app:layout_constraintTop_toBottomOf="@id/box_ten_text"
+           app:layout_constraintVertical_chainStyle="spread"
+
+           />
+
+       <TextView
+           android:id="@+id/box_sixteen_text"
+           style="@style/whiteBox"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/box_sixteen"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toLeftOf="@id/box_nine_text"
+           app:layout_constraintTop_toBottomOf="@id/box_fifteen_text"
+           app:layout_constraintVertical_chainStyle="spread" />
+
+       <TextView
+           android:id="@+id/box_seventeen_text"
+           style="@style/whiteBox"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/box_seventeen"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toLeftOf="@id/box_nine_text"
+           app:layout_constraintTop_toBottomOf="@id/box_sixteen_text"
+           app:layout_constraintVertical_chainStyle="spread" />
+
+
+       <Button
+           android:id="@+id/red_button"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/button_red"
+           android:layout_margin="16dp"
+           android:backgroundTint="@color/aliceBlue"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintBaseline_toBaselineOf="@+id/yellow_button"
+           app:layout_constraintEnd_toStartOf="@+id/yellow_button"
+           app:layout_constraintHorizontal_bias="0.5"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toStartOf="parent" />
+
+       <Button
+           android:id="@+id/yellow_button"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_margin="16dp"
+           android:backgroundTint="@color/aliceBlue"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toStartOf="@id/green_button"
+           app:layout_constraintHorizontal_bias="0.5"
+           app:layout_constraintStart_toEndOf="@id/red_button"
+           app:layout_constraintTop_toBottomOf="@id/box_seventeen_text"
+
+           />
+
+
+       <Button
+           android:id="@+id/green_button"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_margin="16dp"
+           android:backgroundTint="@color/aliceBlue"
+           android:text="@string/button_green"
+           android:textColor="@color/aliceBlue"
+           app:layout_constraintBaseline_toBaselineOf="@id/yellow_button"
+           app:layout_constraintStart_toEndOf="@id/yellow_button"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintHorizontal_bias="0.5"
+           />
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
