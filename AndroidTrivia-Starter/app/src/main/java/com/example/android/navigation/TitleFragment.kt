@@ -1,6 +1,8 @@
 package com.example.android.navigation
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
@@ -25,6 +27,11 @@ class TitleFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        Log.i("TitleFragment", "OnAttach called")
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -38,11 +45,42 @@ class TitleFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentTitleBinding>(inflater, R.layout.fragment_title,container, false)
         binding.playButton.setOnClickListener {
-            view: View -> view.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToGameFragment())
+            view: View -> view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
         }
 
         setHasOptionsMenu(true)
+        Log.i("TitleFragment","onCreateView called")
         return binding.root
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i("TitleFragment", "OnStart called")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i("TitleFragment", "OnResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i("TitleFragment", "OnPause called")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.i("TitleFragment", "onStop called")
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        Log.i("TitleFragment", "OnDestroyView called")
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        Log.i("TitleFragment", "OnDetach called")
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
