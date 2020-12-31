@@ -68,7 +68,6 @@ class GameFragment : Fragment() {
 
     }
 
-
     /** Methods for buttons presses **/
 
     private fun gameFinished() {
